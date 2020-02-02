@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
 {
+    protected $guarded = [];
 
     // reverse relation with question
     public function question()

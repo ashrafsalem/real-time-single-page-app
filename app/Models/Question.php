@@ -26,7 +26,7 @@ class Question extends Model
     // one to many relation with reply
     public function replies()
     {
-        return $this->hasMany(Reply::claa);
+        return $this->hasMany(Reply::class);
     }
 
     // reverse relation with category
