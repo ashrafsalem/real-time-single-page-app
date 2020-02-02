@@ -10,6 +10,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ReplyController extends Controller
 {
+    public function __construct()
+    {
+        // middleware to not accept store,update or delete if
+        // you're not jwt authenticate
+        $this->middleware('JWT', ['except' => ['index', 'show']]);
+    }
 
     public function index(Question $question)
     {
